@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    font-size: 15pt;
+}
+h1{
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #121212;
+}
+#newcountdown{
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #eee;
+}
+.me{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #FF1D8F;
+  color: #fff;
+  margin: 7px;
+  padding: 10px;
+}
+</style>
+  <title>national</title>
+</head>
+
+<body>
+<script>
+
+   // CountDownTimer('12/31/2021 10:1 AM', 'countdown');
+    CountDownTimer('06/22/2022 10:1 AM', 'newcountdown');
+
+    function CountDownTimer(dt, id)
+    {
+        var end = new Date(dt);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = 'EXPIRED!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById(id).innerHTML = days + 'days ';
+            document.getElementById(id).innerHTML += hours + 'hrs ';
+            document.getElementById(id).innerHTML += minutes + 'mins ';
+            document.getElementById(id).innerHTML += seconds + 'secs';
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    }
+
+</script>
+<p class="me">instagram : @le.wox</p>
+<h1>الامتحان الوطني </h1>
+<div id="newcountdown"></div>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
