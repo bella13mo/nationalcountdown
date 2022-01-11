@@ -6,31 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   body {
-    font-family : tahoma;
-    font-size: 14pt;
-    background-color : #EEEEEE;
+    font-size: 15pt;
 }
 h1{
   text-align: center;
   margin-bottom: 10px;
-  border-bottom: 1px solid #121212;
+  border-bottom: 0px solid #121212;
 }
-#newcountdown{
+.main{
+  margin: 30px auto;
+  max-width: 400px;
+  min-height:;
+  display : grid;
+  justify-content: center;
+  align-items: center;
+}
+.main #days , .main #seconds{
+  background-color: #FFC6C6;
+  margin: 10px;
   text-align: center;
-  margin-top: 10px;
+  border-radius: 50px;
+  font-weight: bold;
+  color: #640808;
   padding: 10px;
-  color: #000;
-  Border: 4px solid #000;
-  font-size : 18pt !important ;
-  background-color: #FFF;
 }
+.main h1{
+  border: 
+}
+
 .me{
   position: fixed;
   bottom: 0;
+  text-decoration: none;
   right: 0;
-  background-color: #00f;
-  color: #FFF;
-  margin: 7px;
+  background-color: #6C6D70;
+  color: #fff;
+  width: 100%;
+  margin: 0px;
+  text-align : center;
   padding: 10px;
 }
 </style>
@@ -39,7 +52,9 @@ h1{
 
 <body>
 <script>
-    CountDownTimer('06/22/2022 08:00 AM', 'newcountdown');
+
+   // CountDownTimer('12/31/2021 10:1 AM', 'countdown');
+    CountDownTimer('06/22/2022 10:1 AM', 'newcountdown');
 
     function CountDownTimer(dt, id)
     {
@@ -61,26 +76,30 @@ h1{
 
                 return;
             }
-              var days = Math.floor(distance / _day);
-              var hours = Math.floor((distance % _day) / _hour);
-      //      var minutes = Math.floor((distance % _hour) / _minute);
-       //     var seconds = Math.floor((distance % _minute) / _second);
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
 
-              document.getElementById(id).innerHTML =  days + ' Days ' ;
-              document.getElementById(id).innerHTML += hours + 'hrs ';
-        //    document.getElementById(id).innerHTML += minutes + 'mins ';
-         //   document.getElementById(id).innerHTML += seconds + 'secs';
+            document.getElementById('days').innerHTML = days + 'days ';
+          //  document.getElementById(id).innerHTML += hours + 'hrs ';
+         //   document.getElementById(id).innerHTML += minutes + 'mins ';
+            document.getElementById('seconds').innerHTML = seconds + 'secs';
         }
 
         timer = setInterval(showRemaining, 1000);
     }
 
 </script>
-<p class="me">instagram : @le.wox</p>
-<h1>  🤣 الامتحان الوطني </h1>
-<div id="newcountdown"></div>
-<a href="https://instagram.com/le.wox"> Nod a'weld l97 t7feed </a>
- <div id="sfc5zgx94n5ec2k4ma7ld348chtgtr48qwd"></div><script type="text/javascript" src="https://counter7.stat.ovh/private/counter.js?c=5zgx94n5ec2k4ma7ld348chtgtr48qwd&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="website counters"><img src="https://counter7.stat.ovh/private/freecounterstat.php?c=5zgx94n5ec2k4ma7ld348chtgtr48qwd" border="0" title="website counters" alt="website counters"></a></noscript>
+<a class="me" href="https://instagram.com/le.wox">click to see my instagram 😮</a>
 
+<div class="main">
+  
+  <h1>NATIONAL 🕖</h1>
+  <p id="days"></p>
+  <p id="seconds"></p>
+  
+</div>
+ <div id="sfc5zgx94n5ec2k4ma7ld348chtgtr48qwd"></div><script type="text/javascript" src="https://counter7.stat.ovh/private/counter.js?c=5zgx94n5ec2k4ma7ld348chtgtr48qwd&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="website counters"><img src="https://counter7.stat.ovh/private/freecounterstat.php?c=5zgx94n5ec2k4ma7ld348chtgtr48qwd" border="0" title="website counters" alt="website counters"></a></noscript>
 </body>
 </html>
